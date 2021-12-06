@@ -31,17 +31,33 @@ function my_keydown(e)
 	
 		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
 		//write a code to check the type of key pressed
-		function my_keydown(e){
-			keyPressed = e.keyCode;
-			console.log(keyPressed);
-
-			if((keyPressed >=97 && keyPressed<=122)||(keyPressed >=65 && keyPressed<=90))
-			{
-				aplhabetkey();
-				document.getElementById("d1").innerHTML="You pressed Alphabet Key";
-				console.log("alphabet key");
-			}
+		{
+			aplhabetkey();
+			document.getElementById("d1").innerHTML="You Pressed Alphabet Key";
+			console.log("alphabet key");
 		}
+
+		if((keyPressed >=48 && keyPressed<=57))
+		{
+			numberkey();
+			document.getElementById("d1").innerHTML="You Pressed Number Key";
+			console.log("number Key");
+		}
+
+		if((keyPressed >=37 && keyPressed<=40))
+		{
+			arrowkey()
+			document.getElementById("d1").innerHTML="You Pressed Arrow key"
+			console.log("arrow key");
+		}
+
+		if((keyPressed >= 17) || (keyPressed >= 18) || (keyPressed >=27))
+		{
+			specialkey();
+			document.getElementById("d1").innerHTML="You Pressed Special key"
+			console.log("special key");
+		}
+		
 	else{
 		otherkey();
 		document.getElementById("d1").innerHTML="You pressed symbol or other key";
@@ -50,9 +66,9 @@ function my_keydown(e)
 
 function aplhabetkey()
 {
-	//upload respective image with the message. 
+	//upload respective image with the message.
 	img_image="Alpkey.png";
-	add();
+	add(); 
 
 }
 function numberkey()
